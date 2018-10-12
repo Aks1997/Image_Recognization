@@ -1,0 +1,10 @@
+if you are using windows then install the Tesseract from : 
+  https://sourceforge.net/projects/tesseract-ocr-alt/ url
+elif you are using macOs:
+  run this command on terminal
+  brew install tesseract --all-languages
+elif you are using ubuntu:
+  run following command
+    brew install tesseract
+    sudo apt-get install tesseract-ocr
+ 
