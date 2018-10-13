@@ -6,10 +6,13 @@
         </head>
         <body>
                 <!-- List of uploaded documents -->
-                {% if data  and path %}
-                        <ul>              
+                {% if data and path %}
+                        <ul>
                                 <img src="{{path}}" alt="Some image" height = "500" width="500">
-                                <h4><strong>Text: </strong> <br />{{ data }}</h4>
+                                <h2><strong>Text: </strong> <br /></h2>
+                                {% for i in data %}
+                                  <h4>{{ i }}</h4>
+                                {% endfor %}
                         </ul>
                 {% else %}
                         <p>No documents.</p>
@@ -24,13 +27,6 @@
                                 {{ form.docfile.errors }}
                                 {{ form.docfile }}
                         </p>
-                        <strong><u>Coordinates</u></strong><br /><br />
-                        <label for="top_left">Top Left: </label>
-                        <input id="top_left" type="text" name="top_left_width" size = "2" placeholder="0", value="0"> x
-                          <input id="top_left" type="text" name="top_left_height"  placeholder="0" size = "2" value = "0"><br /><br />
-                          <label for="top_left">Bottom Right: </label>
-                          <input id="bottom_right" type="text" name="bottom_right_width"  placeholder="0" size = "2"> x
-                            <input id="bottom_right" type="text" name="bottom_right_height"  placeholder="0" size = "2">
                         <p><input type="submit" value="Upload" /></p>
                 </form>
         </body>
